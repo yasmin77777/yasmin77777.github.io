@@ -65,9 +65,11 @@
 			/////////////////// YOUR CODE BELOW HERE /////////////////////////
 			//////////////////////////////////////////////////////////////////
 
-			// TODO 2 - Variable declarations 
-
-
+			// TODO 2 - Variable declarations  
+            var positionX = 0; // TODO 2
+			var points = 20; // TODO 4
+			var speed = 40; // TODO 5
+		
 
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -75,8 +77,15 @@
 			turn it around! 
 			*/
 			function update() {
-
-
+              if (positionX > boardWidth) {
+				speed = speed * -1;
+			  }
+			  if (positionX <0) {
+				speed = speed * -1;
+			  }
+			  
+            positionX += speed; // TODO 5
+			moveBoxTo(positionX); // TODO 1
 			};
 
 			/* 
@@ -85,11 +94,30 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-
+            positionX = 0; // TODO 3
+			points++; // TODO 4
+			changeBoxText(points); // TODO 4
+            speed = 3 * points + 10; // TODO 5
 
 			};
+			
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: coral;
+}
+</style>
+</head>
+<body>
 
+<h1>The background-color Property</h1>
 
+<p>The background color can be specified with a color name.</p>
+
+</body>
+</html>
 
 
 
