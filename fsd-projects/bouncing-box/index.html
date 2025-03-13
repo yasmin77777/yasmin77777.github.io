@@ -77,9 +77,13 @@
 			turn it around! 
 			*/
 			function update() {
+
+			// TODO 6
               if (positionX > boardWidth) {
 				speed = speed * -1;
 			  }
+
+			// TODO 7
 			  if (positionX <0) {
 				speed = speed * -1;
 			  }
@@ -97,27 +101,12 @@
             positionX = 0; // TODO 3
 			points++; // TODO 4
 			changeBoxText(points); // TODO 4
-            speed = 3 * points + 10; // TODO 5
+			//speed += 3; //TODO 5
+            speed = 3 * points + 10; // TODO 8
 
 			};
 			
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-  background-color: coral;
-}
-</style>
-</head>
-<body>
 
-<h1>The background-color Property</h1>
-
-<p>The background color can be specified with a color name.</p>
-
-</body>
-</html>
 
 
 
